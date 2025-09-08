@@ -9,5 +9,9 @@
     "codespaces": { "openFiles": ["test/Business_Logic/Cork_Finance/README.md"] }
   },
   "postCreateCommand": "bash .devcontainer/scripts/postCreateCommand.sh",
-  "postAttachCommand": ["bash", "-lc", ".devcontainer/scripts/attach-run.sh"]
+  "postAttachCommand": [
+    "bash",
+    "-lc",
+    "bash .devcontainer/scripts/attach-run.sh"
+  ]
 }
