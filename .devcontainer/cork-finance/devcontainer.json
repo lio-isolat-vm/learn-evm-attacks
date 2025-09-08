@@ -2,8 +2,7 @@
   "name": "Cork Finance",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
   "remoteEnv": {
-    "LEARN_ATTACK_CONTRACT": "Exploit_CorkFinance",
-    "PATH": "${containerEnv:PATH}:/home/vscode/.foundry/bin"
+    "LEARN_ATTACK_CONTRACT": "Exploit_CorkFinance"
   },
   "customizations": {
     "codespaces": { "openFiles": ["test/Business_Logic/Cork_Finance/README.md"] }
