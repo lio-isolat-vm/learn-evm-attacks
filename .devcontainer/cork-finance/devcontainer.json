@@ -9,5 +9,5 @@
     "codespaces": { "openFiles": ["test/Business_Logic/Cork_Finance/README.md"] }
   },
   "postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
-  "postAttachCommand": "bash -lc 'forge test --match-contract \"$LEARN_ATTACK_CONTRACT\" -vvv; exec bash -l'"
+  "postAttachCommand": "bash -lc 'set -euo pipefail; : ${LEARN_ATTACK_CONTRACT:?Missing LEARN_ATTACK_CONTRACT}; if [[ -z \"${RPC_URL:-}\" ]]; then echo; read -rs -p \"Enter RPC_URL: \" RPC_URL_INPUT; echo; export RPC_URL=\"$RPC_URL_INPUT\"; echo \"export RPC_URL=\\\"$RPC_URL_INPUT\\\"\" >> ~/.bashrc; fi; printf \"\\n▶ Running exploit: %s\\n\\n\" \"$LEARN_ATTACK_CONTRACT\"; forge test --match-contract \"$LEARN_ATTACK_CONTRACT\" -vvv; echo; echo \"✅ Done. Opening interactive shell...\"; exec bash -l'"
 }
