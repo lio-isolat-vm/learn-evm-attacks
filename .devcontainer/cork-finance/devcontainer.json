@@ -1,7 +1,10 @@
 {
-  "name": "Learn EVM Attacks — Cork Finance",
+  "name": "Cork Finance",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-  "remoteEnv": { "LEARN_ATTACK_CONTRACT": "Exploit_CorkFinance" },
+  "remoteEnv": {
+    "LEARN_ATTACK_CONTRACT": "Exploit_CorkFinance",
+    "PATH": "${containerEnv:PATH}:/home/vscode/.foundry/bin"
+  },
   "customizations": {
     "codespaces": { "openFiles": ["test/Business_Logic/Cork_Finance/README.md"] }
   },
