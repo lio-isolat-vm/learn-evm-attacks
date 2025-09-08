@@ -5,5 +5,5 @@
   "customizations": {
     "codespaces": { "openFiles": ["test/Business_Logic/Cork_Finance/README.md"] }
   },
-  "postCreateCommand": "bash .devcontainer/postCreateCommand.sh'"
+  "postCreateCommand": "bash .devcontainer/postCreateCommand.sh"
 }
