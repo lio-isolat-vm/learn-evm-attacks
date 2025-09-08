@@ -3,8 +3,10 @@
   "tasks": [
     {
       "label": "run:attack",
-      "type": "shell",
-      "command": "forge test --match-contract \"$LEARN_ATTACK_CONTRACT\" -vvv'",
+      "type": "process",
+      "command": "forge",
+      "args": ["test", "--match-contract", "${env:LEARN_ATTACK_CONTRACT}", "-vvv"],
+      "options": { "cwd": "${workspaceFolder}" },
       "runOptions": { "runOn": "folderOpen" },
       "presentation": { "reveal": "always", "panel": "dedicated" },
       "problemMatcher": []
