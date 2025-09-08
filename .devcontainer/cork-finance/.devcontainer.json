@@ -1,0 +1,9 @@
+{
+  "name": "Learn EVM Attacks — Cork Finance",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "remoteEnv": { "LEARN_ATTACK_CONTRACT": "Exploit_CorkFinance" },
+  "customizations": {
+    "codespaces": { "openFiles": ["test/Business_Logic/Cork_Finance/README.md"] }
+  },
+  "postCreateCommand": "bash .devcontainer/postCreateCommand.sh'"
+}
